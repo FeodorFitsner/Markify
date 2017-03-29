@@ -42,5 +42,5 @@ after_test:
         $xunitConsole = (Resolve-Path "src/packages/xunit.runner.console.2.*/tools/xunit.console.exe").ToString()
 
         foreach($test in $tests) {
-          & $xunitConsole ".\src\$($test[1])\$($test[0])\bin\$env:CONFIGURATION\$($test[0]).dll" -noshadow
+          & $xunitConsole ".\src\$($test[1])\$($test[0])\bin\$env:CONFIGURATION\$($test[0]).dll"
         }
